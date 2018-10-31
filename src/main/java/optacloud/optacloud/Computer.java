@@ -18,61 +18,74 @@ package optacloud.optacloud;
 
 public class Computer implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    @org.kie.api.definition.type.Label("CPU power")
-    @org.kie.api.definition.type.Description("In gigahertz")
-    private int cpuPower;
-    @org.kie.api.definition.type.Label("Memory")
-    @org.kie.api.definition.type.Description("In gigabyte RAM")
-    private int memory;
-    @org.kie.api.definition.type.Label("Network bandwidth")
-    @org.kie.api.definition.type.Description("In gigabyte per hour")
-    private int networkBandwidth;
-    @org.kie.api.definition.type.Label("Hosting cost")
-    @org.kie.api.definition.type.Description("In dollars per month")
-    private int cost;
+	@org.kie.api.definition.type.Label("CPU power")
+	@org.kie.api.definition.type.Description("In gigahertz")
+	private int cpuPower;
+	@org.kie.api.definition.type.Label("Memory")
+	@org.kie.api.definition.type.Description("In gigabyte RAM")
+	private int memory;
+	@org.kie.api.definition.type.Label("Network bandwidth")
+	@org.kie.api.definition.type.Description("In gigabyte per hour")
+	private int networkBandwidth;
+	@org.kie.api.definition.type.Label("Hosting cost")
+	@org.kie.api.definition.type.Description("In dollars per month")
+	private int cost;
 
-    public Computer() {
-    }
+	@org.kie.api.definition.type.Label(value = "GPU")
+	private boolean gpu;
 
-    public int getCpuPower() {
-        return this.cpuPower;
-    }
+	public Computer() {
+	}
 
-    public void setCpuPower( int cpuPower ) {
-        this.cpuPower = cpuPower;
-    }
+	public int getCpuPower() {
+		return this.cpuPower;
+	}
 
-    public int getMemory() {
-        return this.memory;
-    }
+	public void setCpuPower(int cpuPower) {
+		this.cpuPower = cpuPower;
+	}
 
-    public void setMemory( int memory ) {
-        this.memory = memory;
-    }
+	public int getMemory() {
+		return this.memory;
+	}
 
-    public int getNetworkBandwidth() {
-        return this.networkBandwidth;
-    }
+	public void setMemory(int memory) {
+		this.memory = memory;
+	}
 
-    public void setNetworkBandwidth( int networkBandwidth ) {
-        this.networkBandwidth = networkBandwidth;
-    }
+	public int getNetworkBandwidth() {
+		return this.networkBandwidth;
+	}
 
-    public int getCost() {
-        return this.cost;
-    }
+	public void setNetworkBandwidth(int networkBandwidth) {
+		this.networkBandwidth = networkBandwidth;
+	}
 
-    public void setCost( int cost ) {
-        this.cost = cost;
-    }
+	public int getCost() {
+		return this.cost;
+	}
 
-    public Computer( int cpuPower, int memory, int networkBandwidth, int cost ) {
-        this.cpuPower = cpuPower;
-        this.memory = memory;
-        this.networkBandwidth = networkBandwidth;
-        this.cost = cost;
-    }
+	public void setCost(int cost) {
+		this.cost = cost;
+	}
+
+	public boolean isGpu() {
+		return this.gpu;
+	}
+
+	public void setGpu(boolean gpu) {
+		this.gpu = gpu;
+	}
+
+	public Computer(int cpuPower, int memory, int networkBandwidth, int cost,
+			boolean gpu) {
+		this.cpuPower = cpuPower;
+		this.memory = memory;
+		this.networkBandwidth = networkBandwidth;
+		this.cost = cost;
+		this.gpu = gpu;
+	}
 
 }
