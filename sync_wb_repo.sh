@@ -4,7 +4,7 @@ echo -e "Synchronizing Repository.";
 export WB_REPO="origin";
 export REMOTE_REPO="remote_hub";
 fetchDetails=`git pull`;
-if [ ${#fetchDetails} -ge 1 ]
+if [[ $fetchDetails = "Already up to date." ]]
 then
 branchList=`git branch -r`;
 while IFS= read -r var
