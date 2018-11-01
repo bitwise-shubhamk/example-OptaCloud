@@ -23,6 +23,7 @@ fi
 done <<EOF
 $branchList
 EOF
+git checkout master
 else
 echo -e "No changes in remote Repository $REMOTE_REPO"
 fi
